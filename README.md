@@ -1,30 +1,7 @@
-const int trigPin = 9;
-const int echoPin = 10;
+# Ultrasonic Distance Measurement using Arduino
 
-long duration;
-int distance;
+This project measures distance using an ultrasonic sensor (HC-SR04) and Arduino.
 
-void setup() {
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  Serial.begin(9600);
-}
+## Output Screenshot
+![Output](Screenshot%202026-02-10%20235621.png)
 
-void loop() {
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-
-  duration = pulseIn(echoPin, HIGH);
-
-  distance = duration * 0.034 / 2;
-
-  Serial.print("Distance: ");
-  Serial.println(distance);
-
-  delay(500);
-}
-![Output](Screenshot 2026-02-10 235621.png)
