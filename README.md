@@ -27,3 +27,4 @@ void loop() {
 
   delay(500);
 }
+![Output](Screenshot 2026-02-10 235621.png)
